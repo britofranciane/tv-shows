@@ -1,5 +1,7 @@
 # TV Shows
 
+🚀 **Deploy:** [Acesse o Projeto na Vercel](https://tv-shows-xi.vercel.app)
+
 Este projeto é uma aplicação React que consome a API do TVMaze para exibir informações sobre séries de TV. A aplicação inclui uma página inicial com uma lista de séries, uma página de detalhes para cada série e tratamento de erros. O projeto utiliza hooks personalizados e uma arquitetura modular para manter o código limpo e organizado.
 
 ## Objetivo:
