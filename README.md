@@ -1,69 +1,117 @@
-# TV Shows Application
+# TV Shows
 
-## Descrição
+Este projeto é uma aplicação React que consome a API do TVMaze para exibir informações sobre séries de TV. A aplicação inclui uma página inicial com uma lista de séries, uma página de detalhes para cada série e tratamento de erros. O projeto utiliza hooks personalizados e uma arquitetura modular para manter o código limpo e organizado.
 
-Aplicação para visualização e busca de detalhes sobre shows de TV, desenvolvida com **React** e **TypeScript**. Esta aplicação permite a visualização de uma lista de shows e a consulta de detalhes específicos sobre cada show.
+## Objetivo:
 
-## Estrutura do Projeto
+A aplicação possui duas principais visualizações:
 
-- **`src/components/`**: Componentes React para exibição de shows e detalhes.
-- **`src/hooks/`**: Hooks personalizados (`useShows` e `useShowDetails`) para gerenciar o estado e a lógica de negócios.
-- **`src/services/`**: Funções para interagir com APIs externas (`fetchShows` e `fetchShowDetails`).
-- **`src/App.tsx`**: Componente principal que integra a aplicação.
-- **`src/index.tsx`**: Ponto de entrada da aplicação React.
+##### 1. Lista de Séries:
 
-## Hooks
+Exibição de uma lista de séries, incluindo o nome e a imagem de cada série.
 
-- **`useShows`**: Hook personalizado que busca e gerencia a lista de shows. Inclui lógica para lidar com o estado de carregamento e erros.
-- **`useShowDetails`**: Hook personalizado que busca e gerencia detalhes de um show específico. Similar ao `useShows`, mas foca em um show específico.
+##### 2. Detalhes da Série:
 
-## Principais Bibliotecas e Ferramentas
+Exibição detalhada de uma série selecionada, incluindo:
 
-- **React**: Biblioteca para a construção de interfaces de usuário.
-- **TypeScript**: Superset do JavaScript que adiciona tipos estáticos ao código.
-- **Vite**: Ferramenta de build e desenvolvimento rápida e moderna.
-- **Vitest**: Framework de testes para testes de unidade e integração.
-- **@testing-library/react**: Biblioteca para facilitar a escrita de testes para componentes React.
-- **dompurify**: Biblioteca para sanitização de HTML, garantindo segurança ao exibir conteúdo dinâmico.
-- **@eslint/js**: Configurações e regras para ESLint, garantindo a qualidade e consistência do código.
-- **sass**: Compilador para arquivos Sass, permitindo o uso de estilos avançados.
-- **@fortawesome/free-solid-svg-icons**: Conjunto de ícones sólidos do Font Awesome para ícones vetoriais de alta qualidade.
-- **react-router-dom**: Biblioteca para roteamento em aplicações React, facilitando a navegação entre páginas.
+- Imagem da série
+- Nome da série
+- Resumo da série
+- Ano da série
+- Categoria da série
 
-## Scripts
+###### Temporada selecionada
 
-- **`npm run dev`**: Inicia o servidor de desenvolvimento.
-- **`npm run build`**: Constrói a aplicação para produção.
-- **`npm run preview`**: Visualiza o build de produção.
-- **`npm run lint`**: Executa o ESLint para verificar problemas de linting.
-- **`npm run format`**: Formata o código com Prettier para manter a consistência.
-- **`npm run test`**: Executa os testes para garantir a integridade do código.
+Lista de episódios para a temporada selecionada, com:
 
-## Instalação e Execução
+- Nome do episódio
+- Imagem do episódio
+- Descrição do episódio
+- Tempo do episódio
+- Funcionalidades:
 
-1. **Clone o repositório**:
-   ```sh
-   git clone <URL_DO_REPOSITORIO>
-   ```
+## Dependências Principais
 
-### Instale as dependências:
+- **React:** Biblioteca principal para a construção da interface de usuário.
+- **React Router DOM:** Para gerenciamento de rotas na aplicação.
+- **DOMPurify:** Biblioteca para sanitização de HTML, garantindo segurança contra XSS.
+- **Sass:** Compilador para arquivos SCSS.
+- **Font Awesome:** Ícones sólidos para a aplicação.
+- **Vitest:** Usada para criação de testes.
+- **ESLint**: Ferramenta para análise e correção de problemas de código.
+- **Prettier**: Formatador de código para garantir consistência na formatação.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+
+## Serviços e Hooks
+
+### Serviços
+
+`api.ts`: Define a URL base e função para realizar requisições à API.
+`showService.ts`: Funções para buscar shows e detalhes dos shows.
+
+### Hooks
+
+`useShowDetails.ts`: Hook para buscar e gerenciar detalhes de um show específico.
+`useShows.ts`: Hook para buscar e gerenciar a lista de shows.
+
+### Componentes
+
+- `Header`: Componente que exibe o cabeçalho da aplicação.
+- `ShowCard`: Componente que exibe informações resumidas de um show.
+- `EpisodeCard`: Componente que exibe informações resumidas de um episódio.
+- `Select`: Componente para seleção de opções, como temporadas.
+- `SkeletonLoader`: Componente para exibir carregadores de esqueleto enquanto os dados estão sendo carregados.
+
+### Páginas
+
+- `Home`: Página inicial que exibe uma lista de shows.
+  `Details`: Página de detalhes que exibe informações completas sobre um show específico.
+  `ErrorPage`: Página exibida quando ocorre um erro.
+
+### Estilos
+
+O projeto utiliza SCSS para estilos. As variáveis de estilo e o esquema de cores são definidos em `src/styles/_variables.scss`.
+
+#### Instruções de Execução e Teste
+
+###### Instalar as depêndencias:
 
 ```sh
 npm install
 ```
 
-### Inicie a aplicação:
+###### Para rodar o projeto, use:
 
 ```sh
 npm run dev
 ```
 
-### Execute os testes:
+###### Para rodar os testes, use:
 
 ```sh
 npm run test
 ```
 
+## Sanitização de HTML
+
+Para garantir que o conteúdo HTML exibido na aplicação esteja livre de vulnerabilidades, foi usada a biblioteca `DOMPurify`. Esta biblioteca ajuda a proteger contra ataques de Cross-Site Scripting (XSS) ao remover potencialmente perigosos elementos e atributos de HTML.
+
+`sanitizeHtml.ts`: Função utilitária para sanitizar conteúdo HTML. Esta função é utilizada para limpar qualquer HTML que possa ser inserido dinamicamente, assegurando que apenas conteúdo seguro e confiável seja exibido ao usuário.
+
 ## Testes
 
-Os testes são escritos com Vitest para garantir que os hooks useShows e useShowDetails funcionem corretamente. Os testes verificam o comportamento esperado ao buscar dados e lidar com erros.
+O projeto inclui testes para garantir que as funcionalidades estejam funcionando conforme o esperado. Os testes são realizados utilizando o Vitest.
+
+#### Testes dos Hooks
+
+`useShows`
+**Objetivo**: Verificar se o hook useShows busca corretamente os dados dos shows e lida com erros.
+**Descrição do Teste:**
+Busca dos Shows: Verifica se os dados são corretamente recebidos e armazenados no estado do hook.
+**Tratamento de Erros:** Testa se o hook lida corretamente com erros na requisição e atualiza o estado de erro conforme esperado.
+
+`useShowDetails`
+**Objetivo:** Testar se o hook useShowDetails busca os detalhes de um show específico e lida com erros.
+**Descrição do Teste:**
+**Busca dos Detalhes do Show:** Verifica se os detalhes do show são corretamente recebidos e armazenados no estado do hook.
+**Tratamento de Erros:** Testa se o hook lida corretamente com erros na requisição e atualiza o estado de erro conforme esperado.
