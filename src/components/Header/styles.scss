@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  &__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  &__link {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    color: $color-grey-background;
+    background-color: transparent;
+    border: 1px solid $color-dark;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $color-dark;
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@import '../../styles/variables';
+.skeleton-loader {
+  background-color: $color-grey-background;
+  background: $shimmer-gradient;
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+  &__text {
+    height: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__image {
+    height: 200px;
+    width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  &__rectangle {
+    height: 150px;
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+}
