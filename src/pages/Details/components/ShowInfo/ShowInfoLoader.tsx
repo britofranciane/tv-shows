@@ -4,7 +4,7 @@ import SkeletonLoader, { SkeletonType } from '@components/SkeletonLoader';
 const ShowInfoLoader: React.FC = () => {
   return (
     <div className="show-info">
-      <div style={{ maxWidth: '400px', width: '100%' }}>
+      <div className="show-info__show-image">
         <SkeletonLoader type={SkeletonType.Image} height="588px" />
       </div>
 
@@ -16,7 +16,6 @@ const ShowInfoLoader: React.FC = () => {
             width="300px"
           />
         </h1>
-
         <p>
           <SkeletonLoader
             type={SkeletonType.Text}
@@ -24,7 +23,6 @@ const ShowInfoLoader: React.FC = () => {
             width="150px"
           />
         </p>
-
         {Array.from({ length: 10 }).map((_, index) => (
           <SkeletonLoader
             key={index}
@@ -33,7 +31,6 @@ const ShowInfoLoader: React.FC = () => {
             width="500px"
           />
         ))}
-
         <p>
           <SkeletonLoader
             type={SkeletonType.Text}
@@ -41,8 +38,7 @@ const ShowInfoLoader: React.FC = () => {
             width="400px"
           />
         </p>
-
-        <div className="details__show-info__info-text__badges-container">
+        <div className="show-info__info-text__badges-container">
           {Array.from({ length: 3 }, (_, i) => (
             <SkeletonLoader
               key={i}
