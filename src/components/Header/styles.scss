@@ -14,14 +14,29 @@
     font-size: 1.25rem;
     padding: 0.75rem 2rem;
     color: $color-grey-background;
-    background-color: transparent;
+    background-color: $color-blue-primary;
     border: 1px solid $color-dark;
     border-radius: 0.5rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
     &:hover {
-      background-color: $color-dark;
+      background-color: transparent;
       color: $color-white;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    align-items: center;
+    padding: 1rem;
+    &__title {
+      font-size: 1.75rem;
+      text-transform: uppercase;
+    }
+    &__link {
+      font-size: 1rem;
+      padding: 0.5rem 0.75rem;
     }
   }
 }
