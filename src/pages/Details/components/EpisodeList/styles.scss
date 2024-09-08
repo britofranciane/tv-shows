@@ -9,3 +9,11 @@
     gap: 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  .episodes-section {
+    &__episodes-list {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+}

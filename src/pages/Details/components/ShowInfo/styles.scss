@@ -5,7 +5,7 @@
   margin-bottom: 3rem;
   &__show-image {
     max-width: 600px;
-    width: 400px;
+    width: 100%;
     border-radius: 0.5rem;
   }
   &__info-text {
@@ -29,6 +29,13 @@
     &__badges-container {
       display: flex;
       gap: 1rem;
+      margin-top: 0.5rem;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .show-info {
+    flex-direction: column;
   }
 }

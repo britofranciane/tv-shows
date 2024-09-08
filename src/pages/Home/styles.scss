@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.25rem;
+  width: 100%;
+  box-sizing: border-box;
   &__search {
     border-radius: 1rem;
     padding: 1rem;
@@ -12,7 +14,6 @@
     border: none;
     color: $color-white;
     outline: none;
-    width: 500px; //remover
   }
   h1 {
     text-align: center;
@@ -20,7 +21,17 @@
   }
   &__shows-grid {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    padding: 1rem;
+    &__shows-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
   }
 }

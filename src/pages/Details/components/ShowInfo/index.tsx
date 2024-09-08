@@ -43,8 +43,8 @@ const ShowInfo: React.FC<Props> = ({ showDetails, loading }) => {
           {showDetails?.premiered}
         </p>
 
+        <span>Genres</span>
         <div className="show-info__info-text__badges-container">
-          <span>Genres</span>
           {showDetails?.genres.map((genre: string) => (
             <Badge text={`# ${genre}`} className={'info'} key={genre} />
           ))}

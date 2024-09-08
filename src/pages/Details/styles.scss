@@ -5,43 +5,22 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 3rem;
-    &__show-image {
-      max-width: 600px;
-      width: 400px;
-      border-radius: 0.5rem;
-    }
-    &__info-text {
-      max-width: 600px;
-      h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      p {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 0.5rem;
-        line-height: 1.6;
-        font-size: 1rem;
-        color: $color-grey-light;
-        span {
-          color: $color-white;
-          margin-bottom: 0.5rem;
-        }
-      }
-      &__badges-container {
-        display: flex;
-        gap: 1rem;
-      }
-    }
   }
   &__episodes-section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    &__episodes-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 1.5rem;
-    }
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .details {
+    padding: 0.75rem;
   }
 }
