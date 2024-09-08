@@ -1,10 +1,10 @@
-@import '../../../../styles/variables';
+@import '@styles/variables';
 .show-info {
   display: flex;
   gap: 2rem;
   margin-bottom: 3rem;
   &__show-image {
-    max-width: 600px;
+    max-width: 400px;
     width: 100%;
     border-radius: 0.5rem;
   }
