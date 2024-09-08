@@ -9,10 +9,12 @@ Este projeto é uma aplicação React que consome a API do TVMaze para exibir in
 A aplicação possui duas principais visualizações:
 
 ##### 1. Lista de Séries:
+![TV-Shows-home](https://github.com/user-attachments/assets/b502a506-a608-43b3-bfac-b51ee2818756)
 
 Exibição de uma lista de séries, incluindo o nome e a imagem de cada série.
 
 ##### 2. Detalhes da Série:
+![TV-Shows-details](https://github.com/user-attachments/assets/00650f85-d0bc-4faa-918d-7e5b320ed826)
 
 Exibição detalhada de uma série selecionada, incluindo:
 
