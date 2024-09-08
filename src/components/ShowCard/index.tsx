@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Show } from '@types/showTypes';
+import { Show } from '../../types/showTypes';
 import SkeletonLoader, { SkeletonType } from '../SkeletonLoader';
 import './styles.scss';
 
 interface Props {
-  show: Show;
-  path: string;
+  show?: Show;
+  path?: string;
 }
 
 const ShowCard: React.FC<Props> = ({ show, path }) => {
   return (
     <Link
-      to={path ? `${path}/${show.id}` : '#'}
+      to={path && show ? `${path}/${show.id}` : '#'}
       key={show && show.id}
       className="show-card"
     >

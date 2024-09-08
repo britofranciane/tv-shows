@@ -2,7 +2,7 @@ import React from 'react';
 import ShowCard from '@components/ShowCard';
 import ErrorPage from '../ErrorPage';
 import useShows from '@hooks/useShows/useShows';
-import { Show } from '@types/showTypes';
+import { Show } from '../../types/showTypes';
 import './styles.scss';
 
 const Home: React.FC = () => {

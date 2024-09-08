@@ -1,8 +1,8 @@
 import './styles.scss';
 
 interface Props {
-  options: string[];
-  value: string;
+  options: string[] | number[];
+  value: string | number;
   onChange: (e: string) => void;
   label: string;
 }
@@ -17,7 +17,7 @@ const Select: React.FC<Props> = ({ options, value, onChange, label }) => {
         value={value}
         onChange={(e) => onChange(e.target.value)}
       >
-        {options.map((option: string) => (
+        {options.map((option: string | number) => (
           <option
             key={option}
             value={option}

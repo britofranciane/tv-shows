@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DOMPurify from 'dompurify';
-import { Episode } from '@types/showTypes';
+import { Episode } from '../../types/showTypes';
 import SkeletonLoader, { SkeletonType } from '../SkeletonLoader';
 import './styles.scss';
 

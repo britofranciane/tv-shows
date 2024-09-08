@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchShowDetails } from '../../services/showService';
-import { Episode } from '@types/showTypes';
+import { Episode } from '../../types/showTypes';
 
 interface ShowDetails {
   id: number;

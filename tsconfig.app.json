@@ -18,16 +18,15 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"],
-  "baseUrl": "./src",
-  "paths": {
-    "@types/*": ["types/*"],
-    "@components/*": ["components/*"],
-    "@styles/*": ["styles/*"],
-    "@services/*": ["services/*"],
-    "@hooks/*": ["hooks/*"],
-    "@utils/*": ["utils/*"]
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./",
+    "paths": {
+      "@types/*": ["src/types/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@services/*": ["src/services/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"]
+    }
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge } from '@components/index';
 import { sanitizeHtml } from '@utils/sanitizeHtml';
-import { ShowDetails } from '@types/showTypes';
+import { ShowDetails } from '../../../../types/showTypes';
 import ShowInfoLoader from './ShowInfoLoader';
 import './styles.scss';
 

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Select, SkeletonLoader } from '@components/index';
 import useShowDetails from '@hooks/useShowDetails/useShowDetails';
 import { SkeletonType } from '@components/SkeletonLoader';
-import { Episode } from '@types/showTypes';
+import { Episode } from '../../types/showTypes';
 import { EpisodeList, ShowInfo } from './components/index';
 import ErrorPage from '../ErrorPage';
 import './styles.scss';
@@ -41,6 +41,7 @@ const Details: React.FC = () => {
           />
         ) : (
           <Select
+            label={'Select a season'}
             options={seasons}
             value={selectedSeason}
             onChange={(e: string) => setSelectedSeason(Number(e))}
